@@ -15,6 +15,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3g7-sM-vCd">
+                                <rect key="frame" x="175" y="79" width="64" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M10-Bk-pgl">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <subviews>
@@ -80,9 +86,11 @@
                             <constraint firstItem="m1e-N8-4Vt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z1t-aD-Qq3"/>
                             <constraint firstItem="m1e-N8-4Vt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZJv-PJ-wwN"/>
                             <constraint firstItem="X0f-yn-c6Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eKd-oQ-zqc"/>
+                            <constraint firstItem="3g7-sM-vCd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="ko8-5c-ufE"/>
                             <constraint firstItem="m1e-N8-4Vt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lDn-na-wcO"/>
                             <constraint firstItem="M10-Bk-pgl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nfS-AG-sZy"/>
                             <constraint firstItem="X0f-yn-c6Z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uPr-O4-SB7"/>
+                            <constraint firstItem="3g7-sM-vCd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vd4-7O-DBX"/>
                             <constraint firstItem="m1e-N8-4Vt" firstAttribute="top" secondItem="M10-Bk-pgl" secondAttribute="bottom" constant="112" id="wAe-QO-xzp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -98,6 +106,7 @@
                         <outlet property="calendarHeightConstraint" destination="Gql-bW-MLW" id="0mM-bb-8XM"/>
                         <outlet property="calendarView" destination="X0f-yn-c6Z" id="HFR-dj-rqt"/>
                         <outlet property="navBar" destination="uSM-Nc-Uim" id="zF2-oN-t8a"/>
+                        <outlet property="titleLabel" destination="3g7-sM-vCd" id="76h-Yp-QbT"/>
                         <outlet property="topTableViewConstraint" destination="wAe-QO-xzp" id="ydO-Gg-9eS"/>
                         <outlet property="workOrderTableView" destination="m1e-N8-4Vt" id="JhI-5Q-m8O"/>
                     </connections>

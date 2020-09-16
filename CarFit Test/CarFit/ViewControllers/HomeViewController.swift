@@ -14,6 +14,7 @@ struct HomeViewConstant
 }
 class HomeViewController: UIViewController, AlertDisplayer {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet var navBar: UINavigationBar!
     @IBOutlet var calendarView: UIView!
     @IBOutlet weak var calendar: UIView!
@@ -52,6 +53,8 @@ class HomeViewController: UIViewController, AlertDisplayer {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(calendarTappedOutside))
         tapGesture.delegate = self
         self.view.addGestureRecognizer(tapGesture)
+        getSelectedDate(Date())
+
     }
 
     //MARK:- Show calendar when tapped, Hide the calendar when tapped outside the calendar view
@@ -108,6 +111,23 @@ extension HomeViewController: CalendarDelegate {
     
     func getSelectedDate(_ date: Date) {
         cleanerModel.selectedDate = date
+        let dateFormatter = DateFormatter()
+        if Calendar.current.isDateInToday(date)
+        {
+            dateFormatter.dateFormat  = nil
+            dateFormatter.dateStyle = .medium
+
+            dateFormatter.doesRelativeDateFormatting = true
+            titleLabel.text = dateFormatter.string(from: date)
+          
+        }
+        else
+        {
+            dateFormatter.dateStyle = .none
+
+            dateFormatter.dateFormat = "MM-dd-yyyy"
+            titleLabel.text = dateFormatter.string(from: date)
+        }
         workOrderTableView.reloadData()
     }
     
